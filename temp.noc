@@ -1,4 +1,0 @@
-INFO: Logging enabled: LOGLEVEL = DEBUG
-DEBUG:(' Current Directory: ', '/home/matthew/PycharmProjects/nplib')
-DEBUG: Executing as a script: -- 2017-06-13 05:20:21.720680
-DEBUG: main function started: -- 2017-06-13 05:20:21.720810 
