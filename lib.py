@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 
 import logging
-
 import binascii
+
+import requests
 
 
 def write_file(filename, mode, data):
@@ -122,3 +123,15 @@ def to_hex(t, nbytes):
         for start in xrange(0, len(hex_version), chars_per_item):
             yield hex_version[start:start + chars_per_item]
     return ' '.join(chunkify())
+
+
+def github_login(gituser=None, gitpass=None):
+    r = requests.get('https://api.github.com/user', auth=(gituser, gitpass))
+
+    print r.status_code
+    print r.headers['content-type']
+    print r.encoding
+    print r.text
+    print r.json()
+
+    return r

@@ -6,7 +6,7 @@ import os
 from datetime import datetime
 
 # Third party imports
-import requests
+
 
 # Old Masters imports
 import lib as np
@@ -15,25 +15,14 @@ LOGMODE = 'overwrite'
 LOGFILE = 'debug.log'
 LOGLEVEL = 'DEBUG'
 
-gituser = raw_input("Username: ")
-gitpass = raw_input("Password: ")
 
 # Set up logger
 np.init_logging(LOGMODE, LOGLEVEL, LOGFILE)
 
 
 c = ""
-cwd = c.join(["Directory: ", os.getcwd()])
+cwd = c.join([" Directory: ", os.getcwd()])
 np.logging.debug(cwd)
-
-
-r = requests.get('https://api.github.com/user', auth=(gituser, gitpass))
-
-print r.status_code
-print r.headers['content-type']
-print r.encoding
-print r.text
-print r.json()
 
 
 def main():
