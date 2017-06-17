@@ -2,5 +2,5 @@ INFO: Logging enabled: --verbose
 DEBUG:Directory: /home/matthew/PycharmProjects/nplib
 DEBUG:Starting new HTTPS connection (1): api.github.com
 DEBUG:https://api.github.com:443 "GET /user HTTP/1.1" 200 None
-DEBUG: Starting debug.py as a script: -- 2017-06-17 01:59:43.283208
-DEBUG: main function started: -- 2017-06-17 01:59:43.283468 
+DEBUG: Starting debug.py as a script: -- 2017-06-17 02:52:30.698607
+DEBUG: main function started: -- 2017-06-17 02:52:30.698980 
