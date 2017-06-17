@@ -98,8 +98,7 @@ ENV/
 # mypy
 .mypy_cache/
 .idea/workspace.xml
-!/debug.log
-/debug.log
 /cmn/__init__.py
 /cmn/eta_login.py
 /cmn/
+/sec.end
