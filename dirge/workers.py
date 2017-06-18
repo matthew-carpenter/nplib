@@ -1,6 +1,16 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+import requests
+
+
+class Scout(object):
+    def __init__(self):
+        self.scouting = False
+
+    def scout(self):
+        pass
+
 
 class Hunter(object):
     def __init__(self):
@@ -11,7 +21,8 @@ class Hunter(object):
 
 
 def main():
-    pass
+    r = requests.get('https://www.python.org')
+    print r
 
 
 # Execute as a script

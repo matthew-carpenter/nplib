@@ -1,22 +1,19 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# Standard Library imports
+# ---------------------------------------------------------------------------
+#  IMPORTS
 import os
-from datetime import datetime
-
-# Third party imports
-
-
-# Old Masters imports
 import lib as np
 
+# ---------------------------------------------------------------------------
+#  CONSTANTS
 LOGMODE = 'overwrite'
 LOGFILE = 'debug.log'
 LOGLEVEL = 'DEBUG'
 
-
-# Set up logger
+# ---------------------------------------------------------------------------
+#  LOGGING
 np.init_logging(LOGMODE, LOGLEVEL, LOGFILE)
 
 
