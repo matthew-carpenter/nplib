@@ -54,58 +54,63 @@ def init_logging(logmode='console', loglevel='INFO', logfile=None):
 
     if logmode == 'console':  # only set the logging threshold (no log file output)
         if loglevel == 'DEBUG':
-            logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
-            logging.info(" Logging enabled: %s" % '--verbose')
+            logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s', level=logging.DEBUG)
+            logging.info("Logging enabled: %s" % '--verbose')
         elif loglevel == 'INFO':
-            logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO)
-            logging.info(" Logging enabled: %s" % '--info')
+            logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s', level=logging.INFO)
+            logging.info("Logging enabled: %s" % '--info')
         elif loglevel == 'WARNING':
-            logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.WARNING)
-            logging.info(" Logging enabled: %s" % '--warning')
+            logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s', level=logging.WARNING)
+            logging.info("Logging enabled: %s" % '--warning')
         elif loglevel == 'ERROR':
-            logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.ERROR)
-            logging.info(" Logging enabled: %s" % '--error')
+            logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s', level=logging.ERROR)
+            logging.info("Logging enabled: %s" % '--error')
         elif loglevel == 'CRITICAL':
-            logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.CRITICAL)
-            logging.info(" Logging enabled: %s" % '--critical')
+            logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s', level=logging.CRITICAL)
+            logging.info("Logging enabled: %s" % '--critical')
         else:
             die("")
 
     elif logmode == 'append':  # set logging threshold with log file in append mode
         if loglevel == 'DEBUG':
-            logging.basicConfig(format='%(levelname)s:%(message)s', filename=logfile, level=logging.DEBUG)
-            logging.info(" Logging enabled: %s" % '--verbose')
+            logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s', filename=logfile, level=logging.DEBUG)
+            logging.info("Logging enabled: %s" % '--verbose')
         elif loglevel == 'INFO':
-            logging.basicConfig(format='%(levelname)s:%(message)s', filename=logfile, level=logging.INFO)
-            logging.info(" Logging enabled: %s" % '--info')
+            logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s', filename=logfile, level=logging.INFO)
+            logging.info("Logging enabled: %s" % '--info')
         elif loglevel == 'WARNING':
-            logging.basicConfig(format='%(levelname)s:%(message)s', filename=logfile, level=logging.WARNING)
-            logging.info(" Logging enabled: %s" % '--warning')
+            logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s', filename=logfile, level=logging.WARNING)
+            logging.info("Logging enabled: %s" % '--warning')
         elif loglevel == 'ERROR':
-            logging.basicConfig(format='%(levelname)s:%(message)s', filename=logfile, level=logging.ERROR)
-            logging.info(" Logging enabled: %s" % '--error')
+            logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s', filename=logfile, level=logging.ERROR)
+            logging.info("Logging enabled: %s" % '--error')
         elif loglevel == 'CRITICAL':
-            logging.basicConfig(format='%(levelname)s:%(message)s', filename=logfile, level=logging.CRITICAL)
-            logging.info(" Logging enabled: %s" % '--critical')
+            logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s', filename=logfile, level=logging.CRITICAL)
+            logging.info("Logging enabled: %s" % '--critical')
         else:
             die("")
 
     elif logmode == 'overwrite':  # set logging threshold with log file in overwrite mode
         if loglevel == 'DEBUG':
-            logging.basicConfig(format='%(levelname)s:%(message)s', filename=logfile, filemode='w', level=logging.DEBUG)
-            logging.info(" Logging enabled: %s" % '--verbose')
+            logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s', filename=logfile, filemode='w',
+                                level=logging.DEBUG)
+            logging.info("Logging enabled: %s" % '--verbose')
         elif loglevel == 'INFO':
-            logging.basicConfig(format='%(levelname)s:%(message)s', filename=logfile, filemode='w', level=logging.INFO)
-            logging.info(" Logging enabled: %s" % '--info')
+            logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s', filename=logfile, filemode='w',
+                                level=logging.INFO)
+            logging.info("Logging enabled: %s" % '--info')
         elif loglevel == 'WARNING':
-            logging.basicConfig(format='%(levelname)s:%(message)s', filename=logfile, filemode='w', level=logging.WARNING)
-            logging.info(" Logging enabled: %s" % '--warning')
+            logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s', filename=logfile, filemode='w',
+                                level=logging.WARNING)
+            logging.info("Logging enabled: %s" % '--warning')
         elif loglevel == 'ERROR':
-            logging.basicConfig(format='%(levelname)s:%(message)s', filename=logfile, filemode='w', level=logging.ERROR)
-            logging.info(" Logging enabled: %s" % '--error')
+            logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s', filename=logfile, filemode='w',
+                                level=logging.ERROR)
+            logging.info("Logging enabled: %s" % '--error')
         elif loglevel == 'CRITICAL':
-            logging.basicConfig(format='%(levelname)s:%(message)s', filename=logfile, filemode='w', level=logging.CRITICAL)
-            logging.info(" Logging enabled: %s" % '--critical')
+            logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s', filename=logfile, filemode='w',
+                                level=logging.CRITICAL)
+            logging.info("Logging enabled: %s" % '--critical')
         else:
             die("")
 
